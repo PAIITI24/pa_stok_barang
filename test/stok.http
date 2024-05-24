@@ -1,0 +1,30 @@
+PUT localhost:3011/barang/stok/add
+Accept: application/json
+Content-Type: application/json
+
+//ObatID      int       `json:"obat_id"`
+//Amount      uint      `json:"amount"`
+//ExpiredDate time.Time `json:"expired_date"`
+
+
+{
+  "barang_id": 1,
+  "amount": 10,
+  "expired_date": "19-12-2025"
+}
+
+###
+PUT localhost:3011/barang/stok/reduce
+Accept: application/json
+Content-Type: application/json
+
+//ObatID      int       `json:"obat_id"`
+//Amount      uint      `json:"amount"`
+//ExpiredDate time.Time `json:"expired_date"`
+
+
+{
+"barang_id": 1,
+"amount": 3,
+"expired_date": "19-12-2025"
+}
