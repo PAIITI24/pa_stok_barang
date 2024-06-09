@@ -39,7 +39,7 @@ func DB() *gorm.DB {
 func Migrator() {
 	db := DB()
 
-	_ = db.AutoMigrate(
+	db.AutoMigrate(
 		&model.Barang{},
 		&model.KategoriBarang{},
 		&model.StokKeluar{},

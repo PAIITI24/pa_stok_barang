@@ -12,8 +12,9 @@ type adreqbody struct {
 }
 
 type redreqbody struct {
-	BarangID int  `json:"barang_id"`
-	Amount   uint `json:"amount"`
+	StokMasukID int  `json:"stok_masuk_id"`
+	BarangID    int  `json:"barang_id"`
+	Amount      uint `json:"amount"`
 }
 
 func (S *adreqbody) UnmarshalJSON(bts []byte) (err error) {

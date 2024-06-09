@@ -17,6 +17,10 @@ func main() {
 
 	srv.Put("/barang/stok/add", controller.AddStok)
 	srv.Put("/barang/stok/reduce", controller.ReduceStok)
+	srv.Get("/barang/stok/add/history", controller.ListStokMasuk)
+	srv.Get("/barang/stok/reduce/history", controller.ListStokKeluar)
+	srv.Get("/barang/stok/add/history/:id", controller.ListStokMasukOfBarang)
+	srv.Get("/barang/stok/reduce/history/:id", controller.ListStokKeluarOfBarang)
 
 	err := srv.Listen(":3011")
 
